@@ -7,11 +7,12 @@ import javax.inject.Inject;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
-import com.sjh.admin.dao.TestDAO;
+import com.kjh.user.dao.TestDAO1;
+import com.sjh.admin.dao.AdminUserServiceDAO;
 import com.sjh.admin.vo.BoardVO;
 
 //@Repository
-public class TestDAOImpl1 implements TestDAO {
+public class TestDAOImpl1 implements TestDAO1 {
 	
 	/*
 	@Inject
@@ -23,10 +24,6 @@ public class TestDAOImpl1 implements TestDAO {
 		return session.selectList("list");
 	}*/
 
-	@Override
-	public List<BoardVO> listAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	
 }

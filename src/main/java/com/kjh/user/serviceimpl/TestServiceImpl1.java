@@ -6,18 +6,14 @@ import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
 
-import com.sjh.admin.dao.TestDAO;
-import com.sjh.admin.service.TestService;
+import com.kjh.user.service.TestService1;
+import com.sjh.admin.dao.AdminUserServiceDAO;
+import com.sjh.admin.service.AdminUserService;
 import com.sjh.admin.vo.BoardVO;
 
 //@Service("service")
-public class TestServiceImpl1 implements TestService {
+public class TestServiceImpl1 implements TestService1 {
 
-	@Override
-	public List<BoardVO> listAll() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 /*	@Inject
 	private TestDAO dao;

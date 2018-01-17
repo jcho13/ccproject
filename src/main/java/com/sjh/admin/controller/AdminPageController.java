@@ -12,10 +12,6 @@ public class AdminPageController {
 		return "admin/adminPage";
 	}
 	
-	//Admin CompanyInfo
-	@RequestMapping("/companyInfo.do")
-	public String companyInfo() {
-		return "admin/companyinfo/companyInfo";
-	}
+
 	
 }
