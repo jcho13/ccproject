@@ -7,6 +7,7 @@ CREATE TABLE cpmember
     `cpid`           VARCHAR(20)            NOT NULL     COMMENT '아이디', 
     `cppwd`          VARCHAR(100)           NOT NULL     COMMENT '비밀번호', 
     `cpname`         VARCHAR(45)            NOT NULL     COMMENT '회사명', 
+    `cpemail`		 VARCHAR(200)			NOT NULL	 COMMENT '회사이메일',
     `cpnum`          VARCHAR(45)            NOT NULL     COMMENT '사업자번호', 
     `companyaddr1`   INTEGER(10)            NOT NULL     COMMENT '우편번호', 
     `companyaddr2`   VARCHAR(100)           NOT NULL     COMMENT '도로명주소', 
@@ -18,3 +19,14 @@ CREATE TABLE cpmember
     `cprdate`       timestamp not null default now()     NOT NULL     COMMENT '등록일', 
     PRIMARY KEY (cpno)
 );
+
+insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
+values ('hyundai', 'P@ssw0rd', '현대', 'hyundai@hyundai.co.kr', '000-00-00000', '00000', '서울시 강남구', '삼섬동', '02-000-0000');
+
+
+insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
+values ('lg', 'P@ssw0rd', 'lg', 'lg@lg.co.kr', '000-00-00000', '00000', '서울시 영등포구', '여의도동', '02-000-0000');
+
+
+insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
+values ('lg', 'P@ssw0rd', 'lg', 'lg@lg.co.kr', '000-00-00000', '00000', '서울시 영등포구', '여의도동', '02-000-0000');

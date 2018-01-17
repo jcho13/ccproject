@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.sjh.admin.vo.BoardVO;
 
-public interface TestDAO {
+public interface TestDAO1 {
 
-	public List<BoardVO> listAll();
+//	public List<BoardVO> listAll();
 }

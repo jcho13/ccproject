@@ -10,10 +10,16 @@ import com.sjh.admin.dao.TestDAO;
 import com.sjh.admin.service.TestService;
 import com.sjh.admin.vo.BoardVO;
 
-@Service("service")
-public class TestServiceImpl implements TestService {
+//@Service("service")
+public class TestServiceImpl1 implements TestService {
 
-	@Inject
+	@Override
+	public List<BoardVO> listAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+/*	@Inject
 	private TestDAO dao;
 
 	@Override
@@ -21,5 +27,5 @@ public class TestServiceImpl implements TestService {
 		
 		return dao.listAll();
 	}
-	
+	*/
 }

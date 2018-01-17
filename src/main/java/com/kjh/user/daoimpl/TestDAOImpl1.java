@@ -10,16 +10,23 @@ import org.springframework.stereotype.Repository;
 import com.sjh.admin.dao.TestDAO;
 import com.sjh.admin.vo.BoardVO;
 
-@Repository
-public class TestDAOImpl implements TestDAO {
-
+//@Repository
+public class TestDAOImpl1 implements TestDAO {
+	
+	/*
 	@Inject
 	private SqlSession session;
-
+	
 	@Override
 	public List<BoardVO> listAll() {
 		
 		return session.selectList("list");
+	}*/
+
+	@Override
+	public List<BoardVO> listAll() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

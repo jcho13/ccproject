@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <!--
 	Aesthetic by gettemplates.co
@@ -52,6 +54,9 @@
 	<!--[if lt IE 9]>
 	<script src="/resources/js/respond.min.js"></script>
 	<![endif]-->
+	<script type="text/javascript">
+		
+	</script>
 
 	</head>
 	<body>
@@ -65,9 +70,14 @@
 				<div class="col-md-12 text-right gtco-contact">
 					<ul class="">
 						<li><a href="#"><i class="ti-mobile"></i> +1 (0)123 456 7890 </a></li>
+						<li><a href="login.do">로그인</a></li>
+						<li><a href="signup.do">회원가입</a></li>
+						<li><a href="#">비밀번호찾기</a></li>
+						
+						<!-- <li><a href="#"><i class="ti-mobile"></i> +1 (0)123 456 7890 </a></li>
 						<li><a href="http://twitter.com/gettemplatesco"><i class="ti-twitter-alt"></i> </a></li>
 						<li><a href="#"><i class="icon-mail2"></i></a></li>
-						<li><a href="#"><i class="ti-facebook"></i></a></li>
+						<li><a href="#"><i class="ti-facebook"></i></a></li> -->
 					</ul>
 				</div>
 			</div>
