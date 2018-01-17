@@ -1,6 +1,3 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
 <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -16,24 +13,6 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i>페이지 관리<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.do"><i class="fa fa-columns"></i> 홈페이지</a>
-                                </li>
-                                <li>
-                                    <a href="dashboard.do"><i class="fa fa-columns"></i>사용자 대시보드</a>
-                                </li>
-                            </ul>
-                        </li>
-                            <!-- 페이지 관리 -->
-                        
-                        <li>
-                            <a href="companyInfo.do"><i class="fa fa-table fa-fw"></i> Tables</a>
-                        </li>
-                        	<!-- 업체 정보 관리  -->
-                        
-                        <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
@@ -47,6 +26,9 @@
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Tables</a>
                         </li>
                         <li>
                             <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>
@@ -101,6 +83,18 @@
                                         </li>
                                     </ul>
                                     <!-- /.nav-third-level -->
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li class="active">
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a class="active" href="blank.html">Blank Page</a>
+                                </li>
+                                <li>
+                                    <a href="login.html">Login Page</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
