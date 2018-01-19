@@ -51,12 +51,12 @@
 		                                    <i class="fa fa-support fa-5x"></i>
 		                                </div>
 		                                <div class="col-xs-9 text-right">
-		                                    <div class="huge">13</div>
+		                                    <div class="huge">${companyCnt}</div>
 		                                    <div>업체 수</div>
 		                                </div>
 		                            </div>
 		                        </div>
-		                        <a href="#">
+		                        <a href="companyinfo.do">
 		                            <div class="panel-footer">
 		                                <span class="pull-left">View Details</span>
 		                                <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

@@ -23,6 +23,12 @@ public class AdminUserServiceDAOImpl implements AdminUserServiceDAO {
 		
 		return session.selectList("companyInfo");
 	}
+	//업체 수 조회
+	@Override
+	public int companyCnt() {
+		
+		return session.selectOne("companyCnt");
+	}
 
 	
 }

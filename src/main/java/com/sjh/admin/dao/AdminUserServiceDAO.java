@@ -8,4 +8,6 @@ import com.sjh.admin.vo.Cpmember;
 public interface AdminUserServiceDAO {
 
 	public List<Cpmember> companyInfo();
+	
+	public int companyCnt();
 }

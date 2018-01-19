@@ -23,6 +23,12 @@ public class AdminUserServiceImpl implements AdminUserService {
 
 		return dao.companyInfo();
 	}
+	//업체 수 조회
+	@Override
+	public int companyCnt() {
+		
+		return dao.companyCnt();
+	}
 
 	
 	
