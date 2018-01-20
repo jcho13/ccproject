@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import com.kjh.user.service.TestService1;
 import com.sjh.admin.dao.AdminUserServiceDAO;
 import com.sjh.admin.service.AdminUserService;
-import com.sjh.admin.vo.BoardVO;
+
 
 //@Service("service")
 public class TestServiceImpl1 implements TestService1 {

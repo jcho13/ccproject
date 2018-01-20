@@ -37,7 +37,7 @@
                             <a href="#"><i class="fa fa-files-o fa-fw"></i>고객센터  관리<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="index.do"><i class="fa fa-columns"></i>공지사항</a>
+                                    <a href="notice.do"><i class="fa fa-columns"></i>공지사항</a>
                                 </li>
                                 <li>
                                     <a href="dashboard.do"><i class="fa fa-columns"></i>고객센터 관리</a>

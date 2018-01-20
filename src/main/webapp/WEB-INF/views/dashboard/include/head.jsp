@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>CC Admin 1.0 </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../resources/admin/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">

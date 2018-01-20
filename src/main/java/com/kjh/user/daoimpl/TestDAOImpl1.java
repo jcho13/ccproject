@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.kjh.user.dao.TestDAO1;
 import com.sjh.admin.dao.AdminUserServiceDAO;
-import com.sjh.admin.vo.BoardVO;
+
 
 //@Repository
 public class TestDAOImpl1 implements TestDAO1 {

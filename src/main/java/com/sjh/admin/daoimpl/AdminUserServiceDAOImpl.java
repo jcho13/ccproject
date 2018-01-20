@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.sjh.admin.dao.AdminUserServiceDAO;
-import com.sjh.admin.vo.BoardVO;
+
 import com.sjh.admin.vo.Cpmember;
 
 @Repository
