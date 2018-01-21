@@ -8,7 +8,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.sjh.admin.dao.AdminUserServiceDAO;
-import com.sjh.admin.vo.BoardVO;
+
 import com.sjh.admin.vo.Cpmember;
 
 @Repository
@@ -22,6 +22,12 @@ public class AdminUserServiceDAOImpl implements AdminUserServiceDAO {
 	public List<Cpmember> companyInfo() {
 		
 		return session.selectList("companyInfo");
+	}
+	//업체 수 조회
+	@Override
+	public int companyCnt() {
+		
+		return session.selectOne("companyCnt");
 	}
 
 	

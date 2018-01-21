@@ -10,6 +10,10 @@
 	
 	select * from cpmember
 	</select>
+	
+	<select id="companyCnt" resultType="int">
+		SELECT COUNT(*) From Cpmember;
+	</select>
 
 
 </mapper>

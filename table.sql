@@ -1,5 +1,7 @@
 
-drop table tbl_board;
+
+
+-- drop table cpmember;
 
 CREATE TABLE cpmember
 (
@@ -20,13 +22,18 @@ CREATE TABLE cpmember
     PRIMARY KEY (cpno)
 );
 
-insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
-values ('hyundai', 'P@ssw0rd', '현대', 'hyundai@hyundai.co.kr', '000-00-00000', '00000', '서울시 강남구', '삼섬동', '02-000-0000');
 
+--drop table tbl_notice;
 
-insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
-values ('lg', 'P@ssw0rd', 'lg', 'lg@lg.co.kr', '000-00-00000', '00000', '서울시 영등포구', '여의도동', '02-000-0000');
+CREATE TABLE tbl_notice
+(
+    `nno`        INT                    NOT NULL    AUTO_INCREMENT COMMENT 'pk', 
+    `ntitle`     VARCHAR(200)           NULL         COMMENT '제목', 
+    `ncontent`   TEXT                   NULL         COMMENT '내용', 
+    `nwriter`    VARCHAR(50)            NULL         COMMENT '작성자', 
+    `nrdate`     DATE default now()     NULL         COMMENT '작성일', 
+    `nviewcnt`   INT default '0'        NULL         COMMENT '조회수', 
+    `nisdelete`  CHAR(1) default 'N'    NULL         COMMENT '삭제여부', 
+    PRIMARY KEY (nno)
+);
 
-
-insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
-values ('lg', 'P@ssw0rd', 'lg', 'lg@lg.co.kr', '000-00-00000', '00000', '서울시 영등포구', '여의도동', '02-000-0000');

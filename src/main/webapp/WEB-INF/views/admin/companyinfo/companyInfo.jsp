@@ -43,10 +43,10 @@
                                     <tbody>
                                     <c:forEach items="${list}" var="list">
                                         <tr>
-                                            <th>${list.cpname}</th>
-                                            <th>${list.cpemail}</th>
-                                            <th>${list.cpcallnum}</th>
-                                            <th>${list.cprdate}</th>
+                                            <td>${list.cpname}</td>
+                                            <td>${list.cpemail}</td>
+                                            <td>${list.cpcallnum}</td>
+                                            <td>${list.cprdate}</td>
                                         </tr>
                                     </c:forEach>
                                     </tbody>
