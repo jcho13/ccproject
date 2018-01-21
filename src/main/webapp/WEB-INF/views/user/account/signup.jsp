@@ -15,7 +15,7 @@
                         <h3 class="panel-title">Please Sign Up</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="userSignUp.do" method="post">
                             <fieldset>
                             	<div class="form-group">
                             		<label>아이디</label>
@@ -43,7 +43,7 @@
                             	</div>
                             	<div class="form-group">
                             		<label style="display: block;" >회사주소</label>
-                            		<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호" name="signUpUserPostNo" type="text" readonly="readonly">
+                            		<input class="form-control" style="width: 40%; display: inline;" placeholder="우편번호" name="signUpUserPostNo" type="text" >
                             		<button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="fa fa-search"></i> 우편번호 찾기</button>
                             		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	                                <div class="modal-dialog">
@@ -82,12 +82,13 @@
 	                            </div>
                             	</div>
                             	<div class="form-group">
-                            		<input class="form-control" style="top: 5px;" placeholder="도로명 주소" name="signUpUserCompanyAddress" type="text" readonly="readonly" />
+                            		<input class="form-control" style="top: 5px;" placeholder="도로명 주소" name="signUpUserCompanyAddress" type="text"  />
                             	</div>
                             	<div class="form-group">
-                            		<input class="form-control" placeholder="상세주소" name="signUpUserCompanyAddressDetail" type="text" readonly="readonly" />
+                            		<input class="form-control" placeholder="상세주소" name="signUpUserCompanyAddressDetail" type="text"  />
                             	</div>
-                                <a href="#" class="btn btn-lg btn-success btn-block">회원가입</a>
+                            	<button class="btn btn-lg btn-success btn-block">회원가입</button>
+                                <!-- <a href="#" class="btn btn-lg btn-success btn-block">회원가입</a> -->
                             </fieldset>
                         </form>
                     </div>
@@ -100,4 +101,4 @@
 
 </body>
 
-</html>
+<!-- </html> -->
