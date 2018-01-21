@@ -65,12 +65,23 @@ public class AdminNoticeController {
      */
 	
 	@RequestMapping("noticeRead.do")
-	public String noticeSave(NoticeVO noticeVO, Model model) {
+	public String noticeSave(@RequestParam("nno") int nno,NoticeVO noticeVO, Model model) {
 			
-			model.addAttribute("noticeVO",service.noticeRead(noticeVO) );
 		
+			model.addAttribute("noticeVO",service.noticeViewCnt(nno));
+			model.addAttribute("noticeVO",service.noticeRead(noticeVO) );
 		return "admin/notice/noticeRead";
 	}
 	
+	/** 
+     * 공지사항 삭제. 
+     */
+	@RequestMapping("noticeDelete.do")
+	public String noticeDelete(NoticeVO noticeVO) {
+		
+		service.noticeDelete(noticeVO);
+		
+		return "redirect:notice.do";
+	}
 	
 }

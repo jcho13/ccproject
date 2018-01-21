@@ -43,6 +43,22 @@
 			nno = #{nno} 
 	</select>
 	
-
+	<update id="noticeDelete">
+		UPDATE tbl_notice
+			SET 
+				nisdelete = 'Y'
+			WHERE
+				nno = #{nno} 
+	</update>
+			
+				
+	<update id="noticeViewCnt" parameterType="Integer">
+		UPDATE 
+			 tbl_notice
+		 SET
+		 	nviewcnt = nviewcnt + 1
+		WHERE
+			nno = #{nno} 
+	</update>
 
 </mapper>

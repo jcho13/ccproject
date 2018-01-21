@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.sjh.admin.service.AdminUserService;
-import com.sjh.admin.vo.Cpmember;
+
 
 @Controller
 public class AdminPageController {

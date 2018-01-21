@@ -38,6 +38,18 @@ public class AdminNoticeDAOImpl implements AdminNoticeDAO{
 		
 		return session.selectOne("noticeRead",noticeVO);
 	}
+
+	@Override
+	public void noticeDelete(NoticeVO noticeVO) {
+		
+		session.update("noticeDelete",noticeVO);
+	}
+
+	@Override
+	public Object noticeViewCnt(int nno) {
+		return session.update("noticeViewCnt",nno);
+		
+	}
 	
 	
 }

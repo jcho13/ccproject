@@ -47,12 +47,12 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <c:forEach items="${noticeVO}" var="noticeVO">
+                                    <c:forEach items="${noticeVO}" var="noticeVO" varStatus="status">
 	                                    <c:url var="link" value="noticeRead.do">
 											<c:param name="nno" value="${noticeVO.nno}" />
 										</c:url>
                                         <tr>
-                                            <td style="max-width: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${noticeVO.nno}</td>
+                                            <td style="max-width: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${status.count}</td>
                                             <td style="max-width: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><a href="${link}">${noticeVO.ntitle}</a></td>
                                             <td style="max-width: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">${noticeVO.nwriter}</td>
                                             <td style="max-width: 50px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"><fmt:formatDate pattern="yyyy-MM-dd HH:mm" value="${noticeVO.nrdate}"/></td>
