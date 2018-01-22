@@ -70,7 +70,6 @@
 		if (msg) {
 			if (!confirm( msg + " 하시겠습니까??")) return;
 		}
-		alert(url);
 		location.href=url;
 	}
 </script>

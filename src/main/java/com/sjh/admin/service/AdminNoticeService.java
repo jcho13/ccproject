@@ -12,4 +12,8 @@ public interface AdminNoticeService {
 	
 	public NoticeVO noticeRead(NoticeVO noticeVO);
 	
+	public void noticeDelete(NoticeVO noticeVO);
+	
+	public Object noticeViewCnt(int nno);
+	
 }

@@ -33,6 +33,19 @@ public class AdminNoticeServiceImpl implements AdminNoticeService {
 		
 		return dao.noticeRead(noticeVO);
 	}
+
+	@Override
+	public void noticeDelete(NoticeVO noticeVO) {
+		
+		 dao.noticeDelete(noticeVO);
+	}
+
+	@Override
+	public Object noticeViewCnt(int nno) {
+		
+		return dao.noticeViewCnt(nno);
+	}
+
 	
 	
 	
