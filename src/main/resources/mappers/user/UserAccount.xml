@@ -4,13 +4,13 @@
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   
-<mapper namespace="com.kjh.user.vo.UserAccountVO">
+<mapper namespace="com.kjh.user.vo.UserSignUpVO">
 
-	<insert id="insertUserAccount" parameterType="com.kjh.user.vo.UserAccountVO">
+	<insert id="insertUserAccount" parameterType="com.kjh.user.vo.UserSignUpVO">
 		insert into cpmember (cpid, cppwd, cpname, cpemail, cpnum, companyaddr1, companyaddr2, companyaddr3, cpcallnum)
 		values (
 			#{signUpUserId},					<!-- 회원 아이디 -->
-			#{signUpUserPwd},					<!-- 회원 비밀번호 -->
+			PASSWORD(#{signUpUserPwd}),			<!-- 회원 비밀번호 -->
 			#{signUpUserCompanyName},			<!-- 회원 회사명 -->
 			#{signUpUserEmail},					<!-- 회원 이메일 -->
 			#{signUpUserCompanyNo},				<!-- 회원 사업자번호 -->
@@ -20,6 +20,11 @@
 			#{signUpUserTelNo}					<!-- 회원 회사전화번호 -->
 		)
 	</insert>
+	
+	<select id="checkDuplicationId" parameterType="String" resultType="integer">
+		select count(*) as existIdNum From cpmember 
+		where cpid = #{inputId}
+	</select>
 	
 	<!-- <update id="updateNotice" parameterType="com.sjh.admin.vo.NoticeVO">
 		UPDATE tbl_notice

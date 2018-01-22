@@ -11,7 +11,7 @@ CREATE TABLE cpmember
     `cpname`         VARCHAR(45)            NOT NULL     COMMENT '회사명', 
     `cpemail`		 VARCHAR(200)			NOT NULL	 COMMENT '회사이메일',
     `cpnum`          VARCHAR(45)            NOT NULL     COMMENT '사업자번호', 
-    `companyaddr1`   INTEGER(10)            NOT NULL     COMMENT '우편번호', 
+    `companyaddr1`   VARCHAR(10)            NOT NULL     COMMENT '우편번호', 
     `companyaddr2`   VARCHAR(100)           NOT NULL     COMMENT '도로명주소', 
     `companyaddr3`   VARCHAR(45)            NULL         COMMENT '상세주소', 
     `cpcallnum`      VARCHAR(20)            NOT NULL     COMMENT '전화번호', 

@@ -6,7 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.stereotype.Repository;
 
 import com.kjh.user.dao.UserAccountDAO;
-import com.kjh.user.vo.UserAccountVO;
+import com.kjh.user.vo.UserSignUpVO;
 
 
 @Repository
@@ -16,10 +16,15 @@ public class UserAccountDAOImpl implements UserAccountDAO {
 	private SqlSession session;
 	
 	// 유저 회원가입
-	public void UserSignUp(UserAccountVO accountVo) {
+	public void UserSignUp(UserSignUpVO accountVo) {
 		
 		session.insert("insertUserAccount", accountVo);
+	}
+	
+	// 아이디 중복 체크
+	public int CheckDuplication(String inputId) {
 		
-		System.out.println("dao insert complete");
+		int idCount = session.selectOne("checkDuplicationId", inputId.replace("=", ""));
+		return idCount;
 	}
 }
