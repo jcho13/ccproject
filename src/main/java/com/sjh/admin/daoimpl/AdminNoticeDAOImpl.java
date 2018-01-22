@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.sjh.admin.dao.AdminNoticeDAO;
 import com.sjh.admin.vo.NoticeVO;
+import com.sjh.admin.vo.SearchVO;
 
 @Repository
 public class AdminNoticeDAOImpl implements AdminNoticeDAO{
@@ -28,9 +29,9 @@ public class AdminNoticeDAOImpl implements AdminNoticeDAO{
 	}
 
 	@Override
-	public List<NoticeVO> noticeList() {
+	public List<NoticeVO> noticeList(SearchVO searchVO) {
 		
-		return session.selectList("noticeList");
+		return session.selectList("noticeList",searchVO);
 	}
 
 	@Override

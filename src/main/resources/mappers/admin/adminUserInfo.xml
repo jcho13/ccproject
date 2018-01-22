@@ -6,9 +6,10 @@
   
 <mapper namespace="com.sjh.admin.vo.BoardVO">
 
-	<select id="companyInfo" resultType="com.sjh.admin.vo.Cpmember">
+	<select id="companyInfo"  resultType="com.sjh.admin.vo.Cpmember">
 	
-	select * from cpmember
+	select cpid, cpname, cpemail, cpnum, cpcallnum , date_format(cprdate,'%Y-%m-%d') cprdate from cpmember
+	
 	</select>
 	
 	<select id="companyCnt" resultType="int">

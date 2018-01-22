@@ -26,9 +26,15 @@
                    			
                     <div class="row">
 		                <div class="col-lg-12">
-					            <button type="button" class="btn btn-outline btn-primary pull-right" onclick="fn_moveToURL('noticeWrite.do')">
-					            <i class="fa fa-edit fa-fw"></i> 공지사항 작성</button>      
-							</div>
+		                	<button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#myModal" type="button">
+                                 <i class="fa fa-search"></i>검색하기
+                             </button>
+                             
+                              <%@include file="../../admin/include/searchModal.jsp" %>
+                             
+				            <button type="button" class="btn btn-outline btn-primary pull-right" onclick="fn_moveToURL('noticeWrite.do')">
+				            <i class="fa fa-edit fa-fw"></i> 공지사항 작성</button>      
+						</div>
 		            </div>
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -68,7 +74,6 @@
                     <!-- /.panel -->
                     </div>
                 </div>
-                   
                 </div>
 
 
@@ -80,6 +85,12 @@
 		}
 		location.href=url;
 	}
+	
+	function fn_searchBtn(){
+		location.href='notice.do';
+	}
+	
+	
 </script>
 
 

@@ -23,7 +23,7 @@ public class Cpmember {
     private String cpnum;
 
     //  우편번호
-    private Integer companyaddr1;
+    private String companyaddr1;
 
     //  도로명주소
     private String companyaddr2;
@@ -94,11 +94,11 @@ public class Cpmember {
         this.cpnum = cpnum;
     }
 
-    public Integer getCompanyaddr1() {
+    public String getCompanyaddr1() {
         return companyaddr1;
     }
 
-    public void setCompanyaddr1(Integer companyaddr1) {
+    public void setCompanyaddr1(String companyaddr1) {
         this.companyaddr1 = companyaddr1;
     }
 

@@ -24,19 +24,39 @@
 				nno = #{nno} 
 	</update>
 	
-	<select id="noticeList" resultType="com.sjh.admin.vo.NoticeVO">
+	<sql id="includeNotice">
+	
+		<choose>
+	    <when test="searchText!=null and searchText!='' and searchType!=''">
+	    	nisdelete = 'N' and 
+	    	${searchType} LIKE CONCAT('%', #{searchText},'%' )
+	    </when>
+	    <otherwise>
+	      nisdelete = 'N'
+	    </otherwise>
+	  </choose>
+       
+<!--         검색옵션이 전체 검색일 경우
+        <if test="searchText!=null and searchText!='' and searchType!=''">
+        	nisdelete = 'N'
+        </if>
+          ${searchType} like '%'||#{searchText}||'%' -->
+       
+    </sql> 
+	
+	<select id="noticeList" parameterType="com.sjh.admin.vo.SearchVO" resultType="com.sjh.admin.vo.NoticeVO">
 		SELECT
-			 nno,ntitle,ncontent,nwriter,nrdate,nviewcnt,nisdelete
+			 nno,ntitle,ncontent,nwriter,date_format(nrdate,'%Y-%m-%d') nrdate,nviewcnt,nisdelete
 		FROM 
 			 tbl_notice
-		WHERE
-			nisdelete = 'N'
+		where
+		<include refid="includeNotice"/> 
 		ORDER BY nno DESC
 	</select>
 	
 	<select id="noticeRead" parameterType="com.sjh.admin.vo.NoticeVO" resultType="com.sjh.admin.vo.NoticeVO">
 		SELECT
-			nno,ntitle,ncontent,nwriter,nrdate,nviewcnt,nisdelete
+			nno,ntitle,ncontent,nwriter,date_format(nrdate,'%Y-%m-%d') nrdate,nviewcnt,nisdelete
 		FROM
 			tbl_notice
 		WHERE

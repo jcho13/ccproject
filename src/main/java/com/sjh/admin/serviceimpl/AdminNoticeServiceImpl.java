@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import com.sjh.admin.dao.AdminNoticeDAO;
 import com.sjh.admin.service.AdminNoticeService;
 import com.sjh.admin.vo.NoticeVO;
+import com.sjh.admin.vo.SearchVO;
 
 @Service
 public class AdminNoticeServiceImpl implements AdminNoticeService {
@@ -23,9 +24,9 @@ public class AdminNoticeServiceImpl implements AdminNoticeService {
 	}
 
 	@Override
-	public List<NoticeVO> noticeList() {
+	public List<NoticeVO> noticeList(SearchVO searchVO) {
 		
-		return dao.noticeList();
+		return dao.noticeList(searchVO);
 	}
 
 	@Override

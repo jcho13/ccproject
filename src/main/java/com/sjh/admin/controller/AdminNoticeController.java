@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sjh.admin.service.AdminNoticeService;
 import com.sjh.admin.vo.NoticeVO;
+import com.sjh.admin.vo.SearchVO;
 
 @Controller
 public class AdminNoticeController {
@@ -24,9 +25,18 @@ public class AdminNoticeController {
      */
 	
 	@RequestMapping("notice.do")
-	public String notice(Model model) {
+	public String notice(Model model, SearchVO searchVO) {
 		
-		List<NoticeVO> list = service.noticeList();
+		System.out.println(searchVO.getSearchType());
+		
+		/*if(searchVO.getSearchType().equals("제목")) {
+			searchVO.setSearchType("ntitle");
+		} else if (searchVO.getSearchType().equals("내용")) {
+			searchVO.setSearchType("ncontent");
+		}*/
+		
+		List<NoticeVO> list = service.noticeList(searchVO);
+		System.out.println(searchVO.toString());
 		model.addAttribute("noticeVO", list);
 		
 		return "admin/notice/notice";
