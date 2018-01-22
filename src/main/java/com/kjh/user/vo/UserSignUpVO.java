@@ -1,6 +1,6 @@
 package com.kjh.user.vo;
 
-public class UserAccountVO {
+public class UserSignUpVO {
 
 	// 회원 아이디
 	private String signUpUserId;

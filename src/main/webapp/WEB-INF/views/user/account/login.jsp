@@ -15,13 +15,13 @@
                         <h3 class="panel-title">Please Sign In</h3>
                     </div>
                     <div class="panel-body">
-                        <form role="form">
+                        <form role="form" action="userSignIn.do" method="post">
                             <fieldset>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="아이디" name="userId" type="text" autofocus>
+                                    <input class="form-control" placeholder="아이디" name="userId" id="userId" type="text" autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="비밀번호" name="userPwd" type="password" value="">
+                                    <input class="form-control" placeholder="비밀번호" name="userPwd" id="userPwd" type="password" value="">
                                 </div>
                                 <div class="form-group">
                                 	<button type="button" class="btn btn-outline btn-info" onclick="location.href='signup.do'" >회원가입</button>
