@@ -25,9 +25,11 @@
 	           			
         <div class="row">
           <div class="col-lg-12">
-          		<button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#myModal" type="button">
+          		<!-- <button class="btn btn-outline btn-primary" data-toggle="modal" data-target="#myModal" type="button">
                    <i class="fa fa-search"></i>검색하기
-               </button> 
+               </button>  -->
+               <!--Blue select-->
+
                 <%@include file="../../admin/include/searchModal.jsp" %>
 				<button type="button" class="btn btn-outline btn-primary pull-right" onclick="fn_moveToURL('noticeWrite.do')">
 	         	 <i class="fa fa-edit fa-fw"></i> 공지사항 작성
@@ -62,14 +64,37 @@
 					       </c:forEach>
 	            		</tbody>
 			        </table>
-			         <form role="form" id="form1" name="form1"  method="post">
-			         <%@include file="../../admin/include/pagingforSubmit.jsp" %>
-					</form>
-				</div>
+			      	
+			          <form role="form" id="form1" name="form1"  method="post">
+			         	<%@include file="../../admin/include/pagingforSubmit.jsp" %>
+							
+							<div class="form-group">
+						        <div class=" col-lg-3 pull-left">
+								  <select class="form-control" name="searchType" id="searchType">
+								    <option value="ntitle">제목</option>
+								    <option value="ncontent">내용</option>
+								  </select>
+								</div>
+										
+					          	  <div class="input-group custom-search-form col-lg-4">
+		                         		<input type="text" name="searchText" class="form-control" placeholder="Search...">
+		                             <span class="input-group-btn">
+		                                 <button class="btn btn-default" onclick="fn_formSubmit()" >
+		                                   	<i class="fa fa-search"></i>
+		                                    </button>
+		                             </span>
+		                      	  </div>
+						     </div>
+						    
+			        	</form>
+			        	</div>
+		       		 </div>
+			      </div> 		       
 			</div>
-	    </div>
-	</div>
-</div>
+		</div>
+
+
+
 
 
  <%@include file="../../admin/include/plugin_js.jsp" %>
@@ -81,12 +106,12 @@
 		location.href=url;
 	}
 	
-	function fnSubmitForm(page){ 
-		
-		 document.form1.page.value=page;
-		/* document.from1.submit();  */
-	}
 	
+	function fnSubmitForm(page){ 
+		document.form1.page.value=page;
+		document.form1.submit();
+	}
+
 </script>
 
 

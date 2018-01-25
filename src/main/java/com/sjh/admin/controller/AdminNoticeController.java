@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.sjh.admin.service.AdminNoticeService;
 import com.sjh.admin.vo.NoticeVO;
+import com.sjh.admin.vo.PageVO;
 import com.sjh.admin.vo.SearchVO;
 
 @Controller
@@ -26,12 +27,13 @@ public class AdminNoticeController {
      */
 	
 	@RequestMapping("notice.do")
-	public String notice(Model model, SearchVO searchVO) {
+	public String notice(Model model, SearchVO searchVO,PageVO pageVO) {
 		
 		searchVO.pageCalculate(service.boardCnt());
 		
 		List<NoticeVO> list = service.noticeList(searchVO);
 		System.out.println(searchVO.toString());
+		System.out.println(pageVO.toString());
 		model.addAttribute("noticeVO", list);
 		model.addAttribute("searchVO", searchVO);
 		

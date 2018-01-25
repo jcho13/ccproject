@@ -50,6 +50,9 @@
 		where
 		<include refid="includeNotice"/> 
 		ORDER BY nno DESC
+		<if test="rowStart !=null">			
+			LIMIT  ${rowStart-1}, 10
+		</if>
 	</select>
 	
 	<select id="noticeRead" parameterType="com.sjh.admin.vo.NoticeVO" resultType="com.sjh.admin.vo.NoticeVO">
