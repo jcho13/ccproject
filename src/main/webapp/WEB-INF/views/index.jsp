@@ -90,13 +90,21 @@
 						<li class="active"><a href="index.html">Home</a></li>
 						<li><a href="about.html">About</a></li>
 						<li class="has-dropdown">
-							<a href="services.html">Services</a>
+							<a href="services.html">고객센터</a>
+							<ul class="dropdown">
+								<li><a href="userNotice.do">공지사항</a></li>
+								<li><a href="#">불만사항</a></li>
+								<li><a href="#">페이지2</a></li>
+								<li><a href="#">페이지3</a></li>
+							</ul>
+							
+							<!-- <a href="services.html">Services</a>
 							<ul class="dropdown">
 								<li><a href="#">Web Design</a></li>
 								<li><a href="#">eCommerce</a></li>
 								<li><a href="#">Branding</a></li>
 								<li><a href="#">API</a></li>
-							</ul>
+							</ul> -->
 						</li>
 						<li class="has-dropdown">
 							<a href="#">Dropdown</a>
