@@ -6,6 +6,22 @@
   
 <mapper namespace="com.sjh.admin.vo.NoticeVO">
 
+
+	<sql id="includeNotice">
+		<choose>
+		    <when test="searchText!=null and searchText!='' and searchType!=''">
+		    	nisdelete = 'N' and 
+		    	${searchType} LIKE CONCAT('%', #{searchText},'%' )
+		    </when>
+		    <otherwise>
+		      	nisdelete = 'N'
+		    </otherwise>
+	  </choose>
+    </sql> 
+
+
+
+
 	<insert id="insertNotice" parameterType="com.sjh.admin.vo.NoticeVO">
 		INSERT INTO tbl_notice(
 				ntitle,ncontent,nwriter
@@ -24,25 +40,7 @@
 				nno = #{nno} 
 	</update>
 	
-	<sql id="includeNotice">
 	
-		<choose>
-	    <when test="searchText!=null and searchText!='' and searchType!=''">
-	    	nisdelete = 'N' and 
-	    	${searchType} LIKE CONCAT('%', #{searchText},'%' )
-	    </when>
-	    <otherwise>
-	      nisdelete = 'N'
-	    </otherwise>
-	  </choose>
-       
-<!--         검색옵션이 전체 검색일 경우
-        <if test="searchText!=null and searchText!='' and searchType!=''">
-        	nisdelete = 'N'
-        </if>
-          ${searchType} like '%'||#{searchText}||'%' -->
-       
-    </sql> 
 	
 	<select id="noticeList" parameterType="com.sjh.admin.vo.SearchVO" resultType="com.sjh.admin.vo.NoticeVO">
 		SELECT
@@ -81,4 +79,14 @@
 			nno = #{nno} 
 	</update>
 
+	<select id="boardCnt" resultType="Integer">
+		select count(*) from tbl_notice
+		where
+		<include refid="includeNotice"/> 
+	</select>
+	
+	
+	
+	
+	
 </mapper>

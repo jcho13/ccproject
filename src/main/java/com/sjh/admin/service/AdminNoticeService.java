@@ -17,4 +17,6 @@ public interface AdminNoticeService {
 	
 	public Object noticeViewCnt(int nno);
 	
+	public Integer boardCnt();
+	
 }

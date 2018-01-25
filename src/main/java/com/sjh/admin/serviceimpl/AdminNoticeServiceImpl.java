@@ -47,6 +47,12 @@ public class AdminNoticeServiceImpl implements AdminNoticeService {
 		return dao.noticeViewCnt(nno);
 	}
 
+	@Override
+	public Integer boardCnt() {
+		
+		return dao.boardCnt();
+	}
+
 	
 	
 	

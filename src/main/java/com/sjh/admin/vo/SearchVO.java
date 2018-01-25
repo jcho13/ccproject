@@ -1,6 +1,6 @@
 package com.sjh.admin.vo;
 
-public class SearchVO {
+public class SearchVO extends PageVO{
 	
 	//검색 조건
 	private String searchType ;

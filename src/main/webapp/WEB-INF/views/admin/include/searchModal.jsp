@@ -10,7 +10,7 @@
 							          <button type="button" class="close" data-dismiss="modal">&times;</button>
 							          <h4 class="modal-title">검색하기</h4>
 							        </div>
-							        <form action="notice.do" method="post">
+							        <form action="notice.do" id="form1" method="post">
 							        <div class="modal-body">
 								        <div class="form-group">
 										  <label for="sel1">검색 항목</label>
@@ -22,7 +22,7 @@
 							          <div class="input-group custom-search-form">
 	                               		<input type="text" name="searchText" class="form-control" placeholder="Search...">
 		                                <span class="input-group-btn">
-		                                    <button class="btn btn-default" type="submit" >
+		                                    <button class="btn btn-default" onclick="fn_formSubmit()" >
 		                                       <i class="fa fa-search"></i>
 		                                        </button>
 		                                </span>

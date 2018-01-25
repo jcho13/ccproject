@@ -17,13 +17,12 @@
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">공지사항</h1>
-                </div>
-            </div>
+	            <div class="row">
+	                <div class="col-lg-12">
+	                    <h1 class="page-header">공지사항</h1>
+	                </div>
+	            </div>
            
-         
             	<form id="form1" name="form1" role="form" action="noticeSave.do" method="post" onsubmit="return fn_formSubmit();" >
             		<input type="hidden" name="nno" value="${noticeVO.nno}">
 					<div class="panel panel-default">
@@ -50,7 +49,7 @@
             </div>
             <!-- /.row -->
           </div>
-            </div>
+	</div>
        
 
 

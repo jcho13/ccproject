@@ -17,4 +17,6 @@ public interface AdminNoticeDAO {
 
 	public Object noticeViewCnt(int nno);
 
+	public Integer boardCnt();
+
 }

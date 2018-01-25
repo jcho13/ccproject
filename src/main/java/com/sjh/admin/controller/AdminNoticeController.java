@@ -22,22 +22,18 @@ public class AdminNoticeController {
 
 	/** 
      * 공지사항 리스트. 
+	 * @throws Exception 
      */
 	
 	@RequestMapping("notice.do")
 	public String notice(Model model, SearchVO searchVO) {
 		
-		System.out.println(searchVO.getSearchType());
-		
-		/*if(searchVO.getSearchType().equals("제목")) {
-			searchVO.setSearchType("ntitle");
-		} else if (searchVO.getSearchType().equals("내용")) {
-			searchVO.setSearchType("ncontent");
-		}*/
+		searchVO.pageCalculate(service.boardCnt());
 		
 		List<NoticeVO> list = service.noticeList(searchVO);
 		System.out.println(searchVO.toString());
 		model.addAttribute("noticeVO", list);
+		model.addAttribute("searchVO", searchVO);
 		
 		return "admin/notice/notice";
 	}

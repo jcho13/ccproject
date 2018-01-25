@@ -51,6 +51,11 @@ public class AdminNoticeDAOImpl implements AdminNoticeDAO{
 		return session.update("noticeViewCnt",nno);
 		
 	}
+
+	@Override
+	public Integer boardCnt() {
+		return session.selectOne("boardCnt");
+	}
 	
 	
 }
