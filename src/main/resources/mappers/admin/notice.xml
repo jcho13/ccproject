@@ -49,6 +49,7 @@
 			 tbl_notice
 		where
 		<include refid="includeNotice"/> 
+		
 		ORDER BY nno DESC
 		<if test="rowStart !=null">			
 			LIMIT  ${rowStart-1}, 10

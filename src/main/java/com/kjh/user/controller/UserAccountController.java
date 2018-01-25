@@ -1,10 +1,6 @@
 package com.kjh.user.controller;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.inject.Inject;
-import javax.naming.spi.DirStateFactory.Result;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
