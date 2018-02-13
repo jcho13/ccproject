@@ -15,6 +15,16 @@
 	<select id="companyCnt" resultType="int">
 		SELECT COUNT(*) From Cpmember;
 	</select>
+	
+	<select id="listPage" resultType="com.sjh.admin.vo.Cpmember">
+		select * from cpmember
+		limit #{page} ,10
+	</select>
+	
+	<select id="cpageVO" resultType="com.sjh.admin.vo.Cpmember">
+		select * from cpmember
+		limit #{pageStart} ,#{perPageNum}
+	</select>
 
 
 </mapper>

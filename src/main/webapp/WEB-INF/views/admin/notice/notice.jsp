@@ -65,7 +65,7 @@
 	            		</tbody>
 			        </table>
 			      	
-			          <form role="form" id="form1" name="form1"  method="post">
+			          <form role="form" id="form1" name="form1"  method="get">
 			         	<%@include file="../../admin/include/pagingforSubmit.jsp" %>
 							
 							<div class="form-group">

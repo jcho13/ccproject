@@ -2,7 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <c:if test="${searchVO.totPage>1}">
-
+<div style="text-align: center ">
 	<div id="dataTables-example_paginate" class="dataTables_paginate paging_simple_numbers">
 		<ul class="pagination">
 			<li title="First" class="paginate_button <c:if test="${searchVO.page==1}">disabled</c:if>" onclick="fnSubmitForm(1)"><a href="#"><i class="fa fa-angle-double-left fa-fw"></i> </a></li>
@@ -23,6 +23,6 @@
 		</ul>
 	</div>	
 	<input type="hidden" name="page" id="page" value="" />
-		
+</div>	
 	
 </c:if>

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.sjh.admin.dao.AdminUserServiceDAO;
 import com.sjh.admin.service.AdminUserService;
-
+import com.sjh.admin.vo.CPageVO;
 import com.sjh.admin.vo.Cpmember;
 
 @Service
@@ -28,6 +28,11 @@ public class AdminUserServiceImpl implements AdminUserService {
 	public int companyCnt() {
 		
 		return dao.companyCnt();
+	}
+	@Override
+	public List<Cpmember> listPageVO(CPageVO cpageVO) throws Exception {
+	
+		return dao.listPageVO(cpageVO);
 	}
 
 	
